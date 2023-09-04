@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - 16.13.0
+install:
+  - yarn
+services:
+  - docker
+
+before_install:
+  - docker build -t 7hch1a/youtube-stats -f Dockerfile.dev .
+  
+script:
+  - docker run 7hch1a/youtube-stats npm run build
+  

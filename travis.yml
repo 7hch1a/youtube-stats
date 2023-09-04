@@ -7,7 +7,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t 7hch1a/youtube-stats -f Dockerfile.dev .
+  - docker build -t 7hch1a/youtube-stats -f Dockerfile .
   
 script:
   - docker run 7hch1a/youtube-stats npm run build
